@@ -12,10 +12,11 @@ services:
       - key: DEBUG
         value: "True"
 
-  - type: static
+  - type: web
     name: budget-frontend
+    env: node
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: build
+    startCommand: serve -s build
     plan: free
     autoDeploy: true
