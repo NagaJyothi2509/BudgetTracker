@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: budget-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn budget_backend.wsgi:application
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: 8cw*e7c^fyr4gtb7b*5qxjo+gtw8$6h2j94waxp6j8x=no$toy
+      - key: DEBUG
+        value: "True"
+
+  - type: static
+    name: budget-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    plan: free
+    autoDeploy: true
