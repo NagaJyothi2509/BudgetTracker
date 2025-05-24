@@ -2,6 +2,7 @@ services:
   - type: web
     name: budget-backend
     env: python
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn budget_backend.wsgi:application
     plan: free
