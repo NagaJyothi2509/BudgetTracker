@@ -2,15 +2,14 @@ services:
   - type: web
     name: budgettracker-backend
     runtime: python
-    buildCommand: |
-      pip install -r requirements.txt
-      python manage.py migrate
-    startCommand: gunicorn hubSettings.wsgi:application
+    buildCommand: pip install -r requirements.txt
+    startCommand: |
+      python manage.py migrate && gunicorn hubSettings.wsgi:application
     plan: free
     autoDeploy: true
     envVars:
       - key: DJANGO_SECRET_KEY
-        value: 8cw*e7c^fyr4gtb7b*5qxjo+gtw8$6h2j94waxp6j8x=no$toy
+        value: your-secret-key
       - key: DEBUG
         value: "True"
 
