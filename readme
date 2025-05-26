@@ -1,0 +1,135 @@
+# 📋 Personal Budget Tracker
+
+This is a full-stack web application built with:
+
+* **Frontend**: React.js (with D3.js for data visualization)
+* **Backend**: Django + Django REST Framework
+
+It allows users to manage their income, expenses, and budgets effectively.
+
+---
+
+## 💪 Project Setup – Local Development
+
+Follow these steps to clone the repository and run the application locally.
+
+---
+
+## 📦 Prerequisites
+
+* **Node.js** and **npm** (or **Yarn**)
+* **Python 3.8+** and **pip**
+* **virtualenv** (recommended)
+* **PostgreSQL** or SQLite (default)
+* **Git**
+
+---
+
+## 📁 Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+```
+
+---
+
+## 📆 Project Structure
+
+```
+<your-repo-name>/
+├── backend/     → Django backend code
+├── frontend/    → React frontend code
+├── README.md
+```
+
+---
+
+## ⚙️ Backend Setup (Django)
+
+1. Navigate to the backend directory:
+
+```bash
+cd backend
+```
+```
+
+3. Install dependencies:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+4. Apply migrations and create a superuser:
+
+```bash
+python3 manage.py migrate
+python3 manage.py createsuperuser
+```
+
+5. Run the backend server:
+
+```bash
+python3 manage.py runserver
+```
+
+The backend should now be running at:
+📍 `http://127.0.0.1:8000/`
+
+---
+
+## 🌐 Frontend Setup (React)
+
+1. Open a new terminal and navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+3. Start the development server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+The frontend will run on:
+📍 `http://localhost:3000/`
+
+> ✅ Make sure your frontend API requests point to `http://127.0.0.1:8000/` (you can configure this in your `axios` setup or `.env` file).
+
+---
+
+## 🔐 Environment Variables
+
+You can add environment variables to:
+
+* **Backend**: `.env` file in `backend/` (optional)
+* **Frontend**: `.env` file in `frontend/`
+
+Example (`frontend/.env`):
+
+```
+REACT_APP_API_BASE_URL=http://127.0.0.1:8000
+```
+
+---
+
+## ✅ Done!
+
+Now, your React frontend and Django backend are both running locally and connected.
+
+Happy hacking! 🎉
+
+---
+
+
