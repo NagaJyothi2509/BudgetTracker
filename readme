@@ -28,7 +28,7 @@ Follow these steps to clone the repository and run the application locally.
 ## 📁 Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/NagaJyothi2509/BudgetTracker.git
 cd <your-repo-name>
 ```
 
